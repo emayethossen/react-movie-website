@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './App.css'
 import Home from './components/Home/Home'
 import SideCart from './components/SideCart/SideCart'
+import Header from './components/Header/Header'
+import Contact from './components/Contact/Contact'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,6 +23,9 @@ function App() {
 
   return (
     <div className='container'>
+      <div className="header  m-auto my-3 ">
+        <Header />
+      </div>
       <div className="main row">
         <div className="home-container col-md-8">
           <Home handleWatchTime={handleWatchTime} />
@@ -29,6 +34,7 @@ function App() {
           <SideCart watchTime={watchTime} />
         </div>
       </div>
+      <Contact />
       <ToastContainer />
     </div>
   )
